@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!--本文-->
+<body>
+    <!--ヘッダー-->
+    <header>
+        <!--メニューアイコン-->
+        <div class="menu-icon" id="menu-icon">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <!--タイトル-->
+        <h1 class="title">Day by Day blog</h1>
+        <!--リンク-->
+        <div class="header-icons">
+            <a href="https://github.com/nicomputer-GitHub" target="_blank" class="header-icon">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+            <a href="https://x.com/_ai_security" target="_blank" class="header-icon">
+                <img src="https://img.icons8.com/ios/50/twitterx--v2.png" alt="X icon" class="x-icon hover-effect">
+            </a>                     
+        </div>
+    </header>
+    <!--ナビゲーションボタン-->
+    <nav class="nav-buttons">
+        <a href="main.html" class="nav-button"><strong>Home</strong></a>
+        <a href="about.html" class="nav-button"><strong>About</strong></a>
+        <a href="blog.html" class="nav-button"><strong>Blog</strong></a>
+        <a href="tweet.html" class="nav-button"><strong>Tweet</strong></a>
+    </nav>
+    <!--サイドバー-->
+    <div class="sidebar" id="sidebar">
+        <!--サイドバータイトル-->
+        <div class="sidebar-header">
+            <span class="sidebar-title"><strong>Day by Day blog</strong></span>
+            <a href="javascript:void(0)" class="close-btn" id="close-btn">&times;</a>
+        </div>      
+        <!--サイドバーメニュー-->  
+        <div class="sidebar-links">
+            <div class="sidebar-heading">Concept</div>
+            <a href="main.html" class="sidebar-link"><ion-icon name="home-outline"></ion-icon><strong>Home</strong></a>
+            <div class="sidebar-heading">Concept</div>
+            <a href="about.html" class="sidebar-link"><ion-icon name="information-circle-outline"></ion-icon><strong>About</strong></a>
+            <div class="sidebar-heading">Concept</div>
+            <a href="blog.html" class="sidebar-link"><ion-icon name="create-outline"></ion-icon><strong>Blog</strong></a>
+            <div class="sidebar-heading">Concept</div>
+            <a href="tweet.html" class="sidebar-link"><ion-icon name="chatbubbles-outline"></ion-icon><strong>Tweet</strong></a>
+        </div>
+        <!--お問い合わせなど-->
+        <div class="add">
+            <a href="main.html" class="inquery" id="inquery">Inquery</a>
+            <a href="main.html" class="inquery" id="qanda">Q&A</a>
+            <a href="main.html" class="inquery" id="map">Map</a>
+        </div>
+    </div>
+    <!--開いた時の色変化-->
+    <div class="overlay" id="overlay"></div>
+    
+    <!--パンくずリストを追加 -->
+    <div class="breadcrumbs">
+        <a href="main.html">Home</a> >
+        <span>Blog</span>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+        <h2>Welcome to My Website!!</h2>
+        <p>
+            
+        </p>
+    </div>
+
+    
+    <!--js-->
+    <script src="scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
