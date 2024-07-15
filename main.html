@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <!--本文-->
 <body>
     <!--ヘッダー-->
@@ -26,12 +28,15 @@
             </a>                     
         </div>
     </header>
+    
     <!--ナビゲーションボタン-->
     <nav class="nav-buttons">
-        <a href="home.html" class="nav-button"><strong>Home</strong></a>
+        <a href="main.html" class="nav-button"><strong>Home</strong></a>
         <a href="about.html" class="nav-button"><strong>About</strong></a>
         <a href="blog.html" class="nav-button"><strong>Blog</strong></a>
+        <a href="tweet.html" class="nav-button"><strong>Tweet</strong></a>
     </nav>
+
     <!--サイドバー-->
     <div class="sidebar" id="sidebar">
         <!--サイドバータイトル-->
@@ -41,30 +46,77 @@
         </div>      
         <!--サイドバーメニュー-->  
         <div class="sidebar-links">
-            <div class="sidebar-heading">Concept</div>
+            <div class="sidebar-heading">Home</div>
             <a href="main.html" class="sidebar-link"><ion-icon name="home-outline"></ion-icon><strong>Home</strong></a>
+            <div class="sidebar-heading">About</div>
+            <a href="about.html" class="sidebar-link"><ion-icon name="information-circle-outline"></ion-icon><strong>About</strong></a>
+            <div class="sidebar-heading">Blog</div>
+            <a href="blog.html" class="sidebar-link"><ion-icon name="create-outline"></ion-icon><strong>Blog</strong></a>
+            <div class="sidebar-heading">Tweet</div>
+            <a href="tweet.html" class="sidebar-link"><ion-icon name="chatbubbles-outline"></ion-icon><strong>Tweet</strong></a>
+        </div>
+        <!--お問い合わせなど-->
+        <div class="add">
+            <a href="main.html" class="inquery" id="inquery"><strong>Inquery</strong></a>
+            <a href="main.html" class="inquery" id="qanda"><strong>Q&A</strong></a>
+            <a href="main.html" class="inquery" id="map"><strong>Map</strong></a>
         </div>
     </div>
+    
     <!--開いた時の色変化-->
     <div class="overlay" id="overlay"></div>
-    <!--内容-->
-    <div class="content">
-        <h2>Welcome to My Website!!</h2>
-        <p>This is a homepage created by nicomputer. I am creating this page with the intention of working hard on something little by little day by day.</p>
+
+    <!--スライドショー-->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="C:\Users\tanug\Downloads\IMG_6361.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="C:\Users\tanug\Downloads\IMG_6525.JPG" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="C:\Users\tanug\Downloads\IMG_3658.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="C:\Users\tanug\Downloads\IMG_3455.jpg" style="width:100%">
+        </div>
+            <!-- ドットコンテナ -->
+        <div class="dot-container" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <!--参考文献-->
-    <div class="reference">
-        <ul>
-            <li>
-                <a  href="https://icons8.com/icon/fJp7hepMryiw/ツイッターx">ツイッターx</a> icon by <a href="https://icons8.com">Icons8</a>
-            </li>
-        </ul>
+    <!--本文-->
+    <div class="content">
+        <h2>Welcome to My Website!!</h2>
+        <p>
+           This is a homepage created by <strong>nicomputer</strong>. I am creating this page with the intention of working hard on something little by little <strong>day by day</strong>.
+        </p>
+    </div>  
+
+    <div class="container">
+        <div class="left-panel">
+            <!-- お知らせリスト -->
+            <div class="announcement-list">
+                <h2>Latest Information</h2>
+                <ul id="announcement-list"></ul>
+            </div>
+        </div>
+        <div class="right-panel">
+            
+        </div>
     </div>
-    
+
     <!--js-->
     <script src="scripts.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
