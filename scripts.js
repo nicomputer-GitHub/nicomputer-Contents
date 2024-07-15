@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 事前に用意したお知らせを表示する
     const announcements = [
         {
-            title: "Important Notices",
+            title: "Important Information",
             content: "I created a homepage.",
             date: "2024/07/15"
         },
