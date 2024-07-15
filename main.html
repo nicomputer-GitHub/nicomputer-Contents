@@ -1,35 +1,70 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sample Site</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<!--本文-->
 <body>
-<header>
-    <nav class="navbar bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Sample Site</a>
+    <!--ヘッダー-->
+    <header>
+        <!--メニューアイコン-->
+        <div class="menu-icon" id="menu-icon">
+            <ion-icon name="menu-outline"></ion-icon>
         </div>
+        <!--タイトル-->
+        <h1 class="title">Day by Day blog</h1>
+        <!--リンク-->
+        <div class="header-icons">
+            <a href="https://github.com/nicomputer-GitHub" target="_blank" class="header-icon">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+            <a href="https://x.com/_ai_security" target="_blank" class="header-icon">
+                <img src="https://img.icons8.com/ios/50/twitterx--v2.png" alt="X icon" class="x-icon hover-effect">
+            </a>                     
+        </div>
+    </header>
+    <!--ナビゲーションボタン-->
+    <nav class="nav-buttons">
+        <a href="home.html" class="nav-button"><strong>Home</strong></a>
+        <a href="about.html" class="nav-button"><strong>About</strong></a>
+        <a href="blog.html" class="nav-button"><strong>Blog</strong></a>
     </nav>
-</header>
-<main>
-    <div class="container mt-5 py-5">
-        <div class="row">
-            <h2>About</h2>
-            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+    <!--サイドバー-->
+    <div class="sidebar" id="sidebar">
+        <!--サイドバータイトル-->
+        <div class="sidebar-header">
+            <span class="sidebar-title"><strong>Day by Day blog</strong></span>
+            <a href="javascript:void(0)" class="close-btn" id="close-btn">&times;</a>
+        </div>      
+        <!--サイドバーメニュー-->  
+        <div class="sidebar-links">
+            <div class="sidebar-heading">Concept</div>
+            <a href="main.html" class="sidebar-link"><ion-icon name="home-outline"></ion-icon><strong>Home</strong></a>
         </div>
     </div>
-</main>
-<footer class="py-3 fixed-bottom bg-body-tertiary">
-  <div class="text-center">
-    <span class="text-body-secondary">© Sample Site</span>
-  </div>
-</footer>
+    <!--開いた時の色変化-->
+    <div class="overlay" id="overlay"></div>
+    <!--内容-->
+    <div class="content">
+        <h2>Welcome to My Website!!</h2>
+        <p>This is a homepage created by nicomputer. I am creating this page with the intention of working hard on something little by little day by day.</p>
+    </div>
+
+    <!--参考文献-->
+    <div class="reference">
+        <ul>
+            <li>
+                <a  href="https://icons8.com/icon/fJp7hepMryiw/ツイッターx">ツイッターx</a> icon by <a href="https://icons8.com">Icons8</a>
+            </li>
+        </ul>
+    </div>
+    
+    <!--js-->
+    <script src="scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
