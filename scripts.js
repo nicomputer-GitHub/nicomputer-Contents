@@ -1,30 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const menuIcon = document.getElementById("menu-icon");
-    const sidebar = document.getElementById("sidebar");
-    const closeBtn = document.getElementById("close-btn");
-    const overlay = document.getElementById("overlay");
-
-    // メニューアイコンをクリックした時の処理
-    menuIcon.addEventListener("click", function() {
-        sidebar.style.width = "250px";
-        overlay.style.opacity = "1";
-        overlay.style.pointerEvents = "auto";
-    });
-
-    // クローズボタンをクリックした時の処理
-    closeBtn.addEventListener("click", function() {
-        sidebar.style.width = "0";
-        overlay.style.opacity = "0";
-        overlay.style.pointerEvents = "none";
-    });
-
-    // オーバーレイをクリックした時の処理
-    overlay.addEventListener("click", function(event) {
-        sidebar.style.width = "0";
-        overlay.style.opacity = "0";
-        overlay.style.pointerEvents = "none";
-    });
-
     // スライドショーの設定
     let slideIndex = 1;
     showSlides(slideIndex);
@@ -89,14 +63,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // 事前に用意したお知らせを表示する
     const announcements = [
         {
-            title: "Important Information",
+            title: "Important Notices",
             content: "I created a homepage.",
             date: "2024/07/15"
-        },
-
-        //{
-            
-        //}
+        }
     ];
 
     const announcementList = document.getElementById("announcement-list");
