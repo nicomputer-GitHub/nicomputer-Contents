@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <!--本文-->
 <body>
     <!--ヘッダー-->
     <header>
-        <!--メニューアイコン-->
-        <div class="menu-icon" id="menu-icon">
-            <ion-icon name="menu-outline"></ion-icon>
-        </div>
         <!--タイトル-->
         <h1 class="title">Day by Day blog</h1>
         <!--リンク-->
@@ -21,9 +19,10 @@
             <a href="https://github.com/nicomputer-GitHub" target="_blank" class="header-icon">
                 <ion-icon name="logo-github"></ion-icon>
             </a>
-            <a href="https://x.com/_ai_security" target="_blank" class="header-icon">
-                <img src="https://img.icons8.com/ios/50/twitterx--v2.png" alt="X icon" class="x-icon hover-effect">
-            </a>                     
+            <a href="#" class="header-icon x-icon">
+                <img src="C:\Users\tanug\AppData\Local\Temp\a3f1f383-c2c4-4ea1-b664-0b27cce9f4f7_x-logo (1).zip.4f7\logo-white.png" alt="X Icon">
+            </a>            
+
         </div>
     </header>
     <!--ナビゲーションボタン-->
@@ -31,62 +30,41 @@
         <a href="main.html" class="nav-button"><strong>Home</strong></a>
         <a href="about.html" class="nav-button"><strong>About</strong></a>
         <a href="blog.html" class="nav-button"><strong>Blog</strong></a>
-        <a href="tweet.html" class="nav-button"><strong>Tweet</strong></a>
+        <a href="tweet.html" class="nav-button"><strong></strong></a>
     </nav>
-    <!--サイドバー-->
-    <div class="sidebar" id="sidebar">
-        <!--サイドバータイトル-->
-        <div class="sidebar-header">
-            <span class="sidebar-title"><strong>Day by Day blog</strong></span>
-            <a href="javascript:void(0)" class="close-btn" id="close-btn">&times;</a>
-        </div>      
-        <!--サイドバーメニュー-->  
-        <div class="sidebar-links">
-            <div class="sidebar-heading">Concept</div>
-            <a href="main.html" class="sidebar-link"><ion-icon name="home-outline"></ion-icon><strong>Home</strong></a>
-            <div class="sidebar-heading">Concept</div>
-            <a href="about.html" class="sidebar-link"><ion-icon name="information-circle-outline"></ion-icon><strong>About</strong></a>
-            <div class="sidebar-heading">Concept</div>
-            <a href="blog.html" class="sidebar-link"><ion-icon name="create-outline"></ion-icon><strong>Blog</strong></a>
-            <div class="sidebar-heading">Concept</div>
-            <a href="tweet.html" class="sidebar-link"><ion-icon name="chatbubbles-outline"></ion-icon><strong>Tweet</strong></a>
-        </div>
-        <!--お問い合わせなど-->
-        <div class="add">
-            <a href="main.html" class="inquery" id="inquery">Inquery</a>
-            <a href="main.html" class="inquery" id="qanda">Q&A</a>
-            <a href="main.html" class="inquery" id="map">Map</a>
-        </div>
-    </div>
     <!--開いた時の色変化-->
     <div class="overlay" id="overlay"></div>
-    
     <!--パンくずリストを追加 -->
     <div class="breadcrumbs">
         <a href="main.html">Home</a> >
-        <span>About</span>
+        <span>Blog</span>
     </div>
-
-    <!--内容-->
+    <!--本文-->
     <div class="content">
         <h2>Welcome to My Website!!</h2>
         <p>
-            
+           This is a homepage created by <strong>nicomputer</strong>. I am creating this page with the intention of working hard on something little by little <strong>day by day</strong>.
         </p>
+    </div>  
+
+    <div class="container">
+        <div class="left-panel">
+            <!-- お知らせリスト -->
+            <div class="announcement-list">
+                <h2>Latest Information</h2>
+                <ul id="announcement-list"></ul>
+            </div>
+        </div>
+        <div class="right-panel">
+            
+        </div>
     </div>
 
-    <!--参考文献-->
-    <div class="reference">
-        <ul>
-            <li>
-                <a  href="https://icons8.com/icon/fJp7hepMryiw/ツイッターx">ツイッターx</a> icon by <a href="https://icons8.com">Icons8</a>
-            </li>
-        </ul>
-    </div>
-    
     <!--js-->
     <script src="scripts.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
