@@ -77,4 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
         li.innerHTML = `<strong>${announcement.title}</strong> - <span class="announcement-date">${announcement.date}</span><p>${announcement.content}</p>`;
         announcementList.appendChild(li);
     });
+
+
 });
+
