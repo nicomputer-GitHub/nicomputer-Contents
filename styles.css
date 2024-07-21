@@ -5,23 +5,6 @@ body {
     margin: 0;
     padding: 0;
     padding-top: 100px;
-
-    height: 100%;
-}
-
-#particles-js{ 
-	position:fixed;/*描画固定*/
-	z-index:-1;/*描画を一番下に*/
-	width: 100%;
-	height: 100%;
-	background-color:#35004D;/*背景色*/
-}
-
-#wrapper{
-	position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
-	z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
-	width:100%;
-	height: 100%;
 }
 
 /* ヘッダー */
@@ -76,35 +59,37 @@ header {
     gap: 10px;
 }
 
-/*githubアイコン*/
+/* GitHubアイコン */
 .header-icon {
     color: white;
     font-size: 25px;
-    padding: 0;
+    padding: 0 10px;
     text-decoration: none;
     display: flex;
+    align-items: center;
 }
 
 .header-icon:hover {
     color: #000000;
 }
 
-/* X アイコン */
-.x-icon img {
-    padding-right: 35px;
-    width: 17px; 
-    height: 17px; 
-    position: relative;
-}
-
-/* ホバー時のスタイル */
-.x-icon:hover img {
-    filter: brightness(0%) contrast(100%);
-}
-
 /* ホバー時のスタイル */
 .hover-effect:hover {
     filter: brightness(85%);
+}
+
+/* Xアイコン */
+.header-icon-X {
+    color: white;
+    font-size: 20px;
+    padding-right: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.header-icon-X:hover {
+    color: #000000;
 }
 
 /* ナビゲーションボタンコンテナ */
