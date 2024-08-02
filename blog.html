@@ -1,70 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>HP</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
-<!--本文-->
 <body>
-    <!--ヘッダー-->
-    <header>
-        <!--タイトル-->
-        <h1 class="title">Day by Day blog</h1>
-        <!--リンク-->
-        <div class="header-icons">
-            <a href="https://github.com/nicomputer-GitHub" target="_blank" class="header-icon">
-                <ion-icon name="logo-github"></ion-icon>
+    <div id="particles-js"></div>
+    <div id="overlay"></div>
+    <div id="wrapper">
+        <div id="search-wrap">
+            <a href="https://github.com/nicomputer-GitHub" target="blank" class="header-icon">
+                <i class="fa-brands fa-github" id="github-icon"></i>
             </a>
-            <a href="#" class="header-icon x-icon">
-                <img src="C:\Users\tanug\AppData\Local\Temp\a3f1f383-c2c4-4ea1-b664-0b27cce9f4f7_x-logo (1).zip.4f7\logo-white.png" alt="X Icon">
-            </a>            
-
+            <a href="https://twitter.com/yourprofile" target="blank" class="header-icon-X">
+                <i class="fa-brands fa-x-twitter" id="x-icon"></i>
+            </a>
         </div>
-    </header>
-    <!--ナビゲーションボタン-->
-    <nav class="nav-buttons">
-        <a href="main.html" class="nav-button"><strong>Home</strong></a>
-        <a href="about.html" class="nav-button"><strong>About</strong></a>
-        <a href="blog.html" class="nav-button"><strong>Blog</strong></a>
-        <a href="tweet.html" class="nav-button"><strong></strong></a>
-    </nav>
-    <!--開いた時の色変化-->
-    <div class="overlay" id="overlay"></div>
-    <!--パンくずリストを追加 -->
-    <div class="breadcrumbs">
-        <a href="main.html">Home</a> >
-        <span>Blog</span>
+
+        <!-- 戻るボタン -->
+        <div id="back-button">
+            <i class="fa fa-arrow-left"></i>
+        </div>
+        
+        <!-- メニューボタン -->
+        <div id="menu-button">
+            <i class="fa fa-bars"></i>
+        </div>
+
+        <!-- メニュー -->
+        <div id="menu">
+            <a href="home.html" class="menu-item">
+                <i class="fa fa-home"></i> Home
+            </a>
+            <a href="blog.html" class="menu-item">
+                <i class="fa fa-blog"></i> Blog
+            </a>
+            <a href="album.html" class="menu-item">
+                <i class="fa fa-images"></i> Album
+            </a>
+            <a href="portfolio.html" class="menu-item">
+                <i class="fa fa-briefcase"></i> Portfolio
+            </a>
+            <a href="about.html" class="menu-item">
+                <i class="fa fa-info-circle"></i> About
+            </a>
+            <br>
+            <br>
+        </div>
+
+        <footer>nicomputer</footer>
     </div>
-    <!--本文-->
-    <div class="content">
-        <h2>Welcome to My Website!!</h2>
-        <p>
-           This is a homepage created by <strong>nicomputer</strong>. I am creating this page with the intention of working hard on something little by little <strong>day by day</strong>.
-        </p>
-    </div>  
-
-    <div class="container">
-        <div class="left-panel">
-            <!-- お知らせリスト -->
-            <div class="announcement-list">
-                <h2>Latest Information</h2>
-                <ul id="announcement-list"></ul>
-            </div>
-        </div>
-        <div class="right-panel">
-            
-        </div>
-    </div>
-
-    <!--js-->
-    <script src="scripts.js"></script>
+    
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+    <script src="https://kit.fontawesome.com/09db34d260.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
