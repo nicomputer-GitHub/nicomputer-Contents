@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             "move": {
                 "enable": true,
-                "speed": 2, // この数値を小さくするとゆっくりな動きになる
+                "speed": 2, 
                 "direction": "none", 
                 "random": false, 
                 "straight": false, 
@@ -84,10 +84,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const menuButton = document.getElementById('menu-button');
     const menu = document.getElementById('menu');
-    
+    const overlay = document.getElementById('overlay'); // オーバーレイ要素を取得
+
     menuButton.addEventListener('click', function(event) {
         menu.classList.toggle('active');
         menuButton.classList.toggle('rotate');
+        overlay.style.display = menu.classList.contains('active') ? 'block' : 'none'; // オーバーレイの表示切替
         event.stopPropagation(); // クリックイベントが親要素に伝播するのを防ぐ
     });
 
@@ -96,11 +98,27 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
             menu.classList.remove('active');
             menuButton.classList.remove('rotate');
+            overlay.style.display = 'none'; 
         }
+    });
+
+    overlay.addEventListener('click', function() {
+        menu.classList.remove('active');
+        menuButton.classList.remove('rotate');
+        overlay.style.display = 'none'; 
     });
 
     const backButton = document.getElementById('back-button');
     backButton.addEventListener('click', function() {
         window.history.back(); 
+    });
+
+    $('.slider').bxSlider({
+        mode: 'vertical', 
+        auto: true, 
+        pause: 3000, 
+        speed: 1200, 
+        controls: false, 
+        pager: false 
     });
 });
