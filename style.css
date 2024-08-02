@@ -1,3 +1,4 @@
+/* body */
 body {
     margin: 0;
     padding: 0;
@@ -10,15 +11,25 @@ body {
     overflow: auto;
 }
 
+/* background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* icon */
 #wrapper {
     text-align: center;
     max-width: 800px;
-    padding: 20px;
+    padding: 8px 0;
 }
 
 #search-wrap {
     display: flex;
-    justify-content: flex-end;
     padding: 10px;
     position: absolute;
     right: 20px;
@@ -26,6 +37,7 @@ body {
     width: auto;
 }
 
+/* github X */
 .header-icon, .header-icon-X {
     color: white;
     font-size: 24px;
@@ -37,35 +49,42 @@ body {
     color: #fff56aee;
 }
 
+/* title */
 #title h3 {
     font-size: 58px;
     padding-top: 80px;
 }
 
+/* p */
 p {
     font-size: 18px;
 }
 
+/* link */
 a {
     text-decoration: none;
     color: inherit;
 }
 
+/* overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 5; 
+}
+
+/* footer */
 footer {
     font-size: 15px;
-    margin-top: 20px;
     color: #ccc;
 }
 
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
+/* custom */
 .custom-button {
     display: inline-block;
     padding: 10px 20px;
@@ -105,7 +124,7 @@ footer {
     border-color: black;
 }
 
-/* メニューのスタイル */
+/* menu */
 #menu {
     position: fixed;
     bottom: 0;
@@ -116,18 +135,17 @@ footer {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     transform: translateY(100%);
-    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.8s, opacity 0.8s;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.7);
     z-index: 10;
-    opacity: 0; /* 初期状態で透明に */
+    opacity: 0; 
 }
 
 #menu.active {
     transform: translateY(0);
-    opacity: 1; /* 表示時に不透明に */
+    opacity: 1; 
 }
 
-/* メニューアイテムのスタイル */
 .menu-item {
     display: flex;
     align-items: center;
@@ -141,7 +159,7 @@ footer {
 }
 
 .menu-item i {
-    margin-right: 10px; /* アイコンとテキストの間にスペースを作成 */
+    margin-right: 10px;
 }
 
 .menu-item:hover {
@@ -149,6 +167,7 @@ footer {
     color: #fff;
 }
 
+/* button */
 #menu-button, #back-button {
     position: fixed;
     bottom: 20px;
@@ -167,13 +186,15 @@ footer {
     z-index: 20; 
 }
 
+/* menu */
+#menu-button.rotate {
+    transform: rotate(360deg);
+}
+
+/* back */
 #back-button {
     top: 20px;
     left: 20px;
-}
-
-#menu-button.rotate {
-    transform: rotate(360deg);
 }
 
 #menu-button:hover, #back-button:hover {
@@ -184,6 +205,111 @@ footer {
     padding: 20px;
 }
 
+/* information */
+#news-ticker {
+    position: fixed;
+    top: 12px; 
+    left: 80px;
+    width: 250px; 
+    background-color: black; 
+    overflow: visible; 
+    z-index: 5; 
+    white-space: nowrap;
+}
+
+.slider {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider li {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    background-color: black; 
+}
+
+.slider li a {
+    display: block;
+    color: white; 
+}
+
+.slider li a span {
+    font-size: 0.9rem;
+    color: white;
+}
+
+.slider li:last-child {
+    border-bottom: none;
+}
+
+/* icon */
+#icon-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 60%);
+    width: 300px; 
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 6;
+}
+
+.icon {
+    position: absolute;
+    font-size: 70px;
+    color: white;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #fff56aee;
+}
+
+.icon a {
+    color: inherit;
+}
+
+.home-icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+}
+
+.blog-icon {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.album-icon {
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.portfolio-icon {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-icon {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+
+/* media */
 @media (max-width: 768px) {
     #search-wrap {
         right: 10px;
@@ -192,6 +318,10 @@ footer {
     .header-icon, .header-icon-X {
         font-size: 25px;
         margin-left: 5px;
+    }
+
+    .header-icon:hover, .header-icon-X:hover {
+        color: #fff56aee;
     }
 
     #title h3 {
@@ -205,5 +335,29 @@ footer {
 
     footer {
         font-size: 15px;
+    }
+
+    #menu-button:hover, #back-button:hover {
+        background-color: #ffd900d8;
+    }
+    
+    #news-ticker {
+        position: fixed;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .icon {
+        position: absolute;
+        font-size: 35px;
+        color: white;
+        transition: color 0.3s;
+    }
+
+    .home-icon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
     }
 }
