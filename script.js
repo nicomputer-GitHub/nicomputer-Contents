@@ -113,12 +113,9 @@ document.addEventListener('DOMContentLoaded', function() {
         window.history.back(); 
     });
 
-    $('.slider').bxSlider({
-        mode: 'vertical', 
-        auto: true, 
-        pause: 3000, 
-        speed: 1200, 
-        controls: false, 
-        pager: false 
+    // トップに戻るボタンの動作を追加
+    const scrollTopButton = document.getElementById('scroll-top-button');
+    scrollTopButton.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
