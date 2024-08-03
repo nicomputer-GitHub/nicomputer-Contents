@@ -63,11 +63,37 @@ h1 {
     font-size: 45px;
 }
 
-/* h2 */
-h2 {
-    text-align: left;
-    padding-left: 0;
+/* Add a vertical line before the "Name" section */
+.colored-line::before {
+    content: "";
+    display: inline-block;
+    width: 5px; 
+    height: 30px; 
+    background-color: #ffd900; 
+    margin-right: 20px;
+    margin-left: 20px; 
+    vertical-align: middle; 
     font-size: 30px;
+}
+
+.name-line::before {
+    background-color: #8fe823d1;
+}
+
+.birthplace-line::before {
+    background-color: #ea4848d1;
+}
+
+.university-line::before {
+    background-color: #48fcffd1;
+}
+
+.pastime-line::before {
+    background-color: #f48e2ed1;
+}
+
+.trip-line::before {
+    background-color: #5878f7d1;
 }
 
 /* hr */
@@ -96,6 +122,17 @@ p {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+a.special-link {
+    color: white; 
+    text-decoration: underline; 
+    transition: color 0.3s, text-decoration-color 0.3s; 
+}
+
+a.special-link:hover {
+    color: #daa14dee; 
+    text-decoration-color: #daa14dee; 
 }
 
 .pastime-list {
