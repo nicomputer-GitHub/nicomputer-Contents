@@ -84,17 +84,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const menuButton = document.getElementById('menu-button');
     const menu = document.getElementById('menu');
-    const overlay = document.getElementById('overlay'); // オーバーレイ要素を取得
+    const overlay = document.getElementById('overlay'); 
 
     menuButton.addEventListener('click', function(event) {
         menu.classList.toggle('active');
         menuButton.classList.toggle('rotate');
         overlay.style.display = menu.classList.contains('active') ? 'block' : 'none'; // オーバーレイの表示切替
-        event.stopPropagation(); // クリックイベントが親要素に伝播するのを防ぐ
+        event.stopPropagation(); 
     });
 
     document.addEventListener('click', function(event) {
-        // クリックされた要素がメニューまたはメニューボタンでない場合、メニューを閉じる
         if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
             menu.classList.remove('active');
             menuButton.classList.remove('rotate');
@@ -113,9 +112,31 @@ document.addEventListener('DOMContentLoaded', function() {
         window.history.back(); 
     });
 
-    // トップに戻るボタンの動作を追加
+    // top
     const scrollTopButton = document.getElementById('scroll-top-button');
     scrollTopButton.addEventListener('click', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    // Filtering functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.getAttribute('data-category');
+
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            galleryItems.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+    filterButtons[0].click();
 });
