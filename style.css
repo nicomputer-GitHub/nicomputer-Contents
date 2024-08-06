@@ -64,7 +64,7 @@ h1 {
     font-size: 45px;
 }
 
-/* Add a vertical line before the "Name" section */
+/* colored-line */
 .colored-line::before {
     content: "";
     display: inline-block;
@@ -99,6 +99,10 @@ h1 {
 
 .it-line::before {
     background-color: #0f99eed1;
+}
+
+.site-line::before {
+    background-color: #c90707d1;
 }
 
 /* hr */
@@ -140,9 +144,50 @@ a.special-link:hover {
     text-decoration-color: #daa14dee; 
 }
 
+/* contents */
+#toc {
+    max-width: 50%; 
+    margin: 20px auto; 
+    padding: 20px;
+    background: none; 
+    color: white;
+    border: 1px solid white; 
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 18px;
+}
+
+#toc h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#toc ul li {
+    margin-bottom: 10px;
+}
+
+#toc a {
+    text-decoration: none;
+    color: white; 
+}
+
+#toc a:hover {
+    text-decoration: underline;
+} 
+
+:target {
+    scroll-margin-top: 50vh; 
+}
+
 .pastime-list {
     margin-left: 20px; 
-    padding-left: 20px;
+    padding-left: 50px;
 }
 
 /* overlay */
@@ -443,7 +488,7 @@ footer {
     margin-top: 10px; 
 }
 
-/* Common margin between buttons */
+/* filter button  */
 .filter-btn:not(:first-child) {
     margin-top: 10px; 
 }
@@ -469,7 +514,7 @@ footer {
 .gallery-item {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 1 / 1; /* Ensures items have a square aspect ratio */
+    aspect-ratio: 1 / 1; 
     width: 100%;
     height: auto;
 }
@@ -479,19 +524,26 @@ footer {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the container */
+    object-fit: cover; 
     transition: transform 0.3s ease;
 }
 
-/* Hover effect for images */
+/* effect */
 .gallery-item:hover img {
-    transform: scale(1.1); /* Slight zoom on hover */
+    transform: scale(1.1); 
 }
 
 /* Adjustments for Muuri */
 .item {
     display: block;
-    padding: 0 10px 10px 10px; /* Padding inside each item */
+    padding: 0 10px 10px 10px; 
+}
+
+/* portfolio */
+.small-image {
+    margin-left: 20px;
+    width: 300px; 
+    height: auto; 
 }
 
 /* scroll */
@@ -528,6 +580,45 @@ footer {
     background: #eee;
     animation: mousepathmove 1.4s linear infinite;
     opacity:0;
+}
+
+
+.code-container {
+    padding-left: 30px;
+}
+
+/* code block */
+pre.code-block {
+    background-color: #ffffffd1;
+    color: black;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-left: -10px;
+    border-radius: 8px;
+    overflow-x: auto; 
+    white-space: pre-wrap;
+    word-break: break-all; 
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+}
+
+ /* copy button */
+ .copy-button {
+    position: relative;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.copy-button:hover {
+    background-color: #607e52ee;
+    color: white;
 }
 
 @keyframes mousepathmove{
@@ -567,6 +658,47 @@ footer {
     height: 5px;
     border-radius: 50%;
     border:1px solid #eee;
+}
+
+/* Project buttons container */
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual project button */
+.project-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #1e1e1ed1;
+    border-radius: 10px;
+    width: 150px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Icons inside project button */
+.project-button img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: width 0.3s, height 0.3s;
+}
+
+/* Text inside project button */
+.project-text {
+    color: white;
+}
+
+/* Hover effect for project button */
+.project-button:hover {
+    background-color: #535353d1;
+    transform: translateY(-5px);
 }
 
 /* media */
