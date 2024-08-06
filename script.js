@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "retina_detect": true
     });
 
+    // menu
     const menuButton = document.getElementById('menu-button');
     const menu = document.getElementById('menu');
     const overlay = document.getElementById('overlay'); 
@@ -107,18 +108,19 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.style.display = 'none'; 
     });
 
+    // back button
     const backButton = document.getElementById('back-button');
     backButton.addEventListener('click', function() {
         window.history.back(); 
     });
 
-    // top
+    // scroll top
     const scrollTopButton = document.getElementById('scroll-top-button');
     scrollTopButton.addEventListener('click', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Filtering functionality
+    // filter
     const filterButtons = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
 
@@ -138,5 +140,30 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // copy
+    function copyToClipboard(button) {
+        const codeBlock = button.nextElementSibling.textContent;
+        const textArea = document.createElement('textarea');
+        textArea.value = codeBlock;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+
+        button.textContent = 'Copied!';
+        setTimeout(() => {
+            button.textContent = 'Copy';
+        }, 2000);
+    }
+
+    // event 
+    const copyButtons = document.querySelectorAll('.copy-button');
+    copyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            copyToClipboard(button);
+        });
+    });
+
     filterButtons[0].click();
 });
